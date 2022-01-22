@@ -1,0 +1,34 @@
+import { useState } from "react";
+
+
+const Mail = () => {
+
+    const [mailNBame , setmailNBame]= useState("");
+    const [mailError , setmailError] = useState(null)
+
+    const mailVaildation = (e) => {
+        if(e.target.name === "email") {
+            setmailNBame(e.target.value);
+            if (e.target.value === "") {
+                setmailError (null);
+            }else if (e.target.value.match("[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}")){
+                setmailError (" Vaild");
+            }else {
+                setmailError ("Not Vaild");
+            }
+        }
+    }
+    return (
+    <div className="mb-3">
+      <label for="Email" className="">Email Address</label>
+      <input type="email" className="form-control" 
+      required
+      onChange={(e) => mailVaildation(e)}
+      name="email"
+      pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" />
+      <small>{mailError}</small>
+    </div>
+    )
+}
+
+export default Mail;
