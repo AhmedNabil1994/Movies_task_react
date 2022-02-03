@@ -14,18 +14,18 @@ function NavBar() {
     </button>
     <div className=" row collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item col-md-3 col-2 fs-4">
+        <li className="nav-item col-md-3 col-2 fs-3">
           <Link className="nav-link active " to="/">Movies</Link>
         </li>
         
-        <li className="nav-item col-md-3 col-2 fs-4 ">
+        <li className="nav-item col-md-3 col-2 fs-3 ">
           <Link className="nav-link" to="/myfav">Favorites</Link>
         </li>
         <span className="btn btn-danger my-3" >{fav.length}</span>        
-        <li className="nav-item col-md-3 col-2 offset-2 fs-4">
+        <li className="nav-item col-md-3 col-2 offset-1 fs-3">
           <Link className="nav-link" to="/login">Login</Link>
         </li>
-        <li className="nav-item col-md-3 col-2 fs-4">
+        <li className="nav-item col-md-3 col-2 fs-3">
           <Link className="nav-link" to="/register">Register</Link>
         </li>
         
